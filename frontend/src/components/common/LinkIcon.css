@@ -1,0 +1,16 @@
+.link-icon {
+    --link-color: currentColor;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 4px;
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.link-icon--gray {
+    --link-color: silver;
+}

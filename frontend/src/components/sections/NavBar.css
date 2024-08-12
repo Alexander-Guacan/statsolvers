@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 24px;
+    padding: 20px var(--padding-page-horizontal);
+    min-height: 12vh;
+    background-color: #1a1a1a;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}

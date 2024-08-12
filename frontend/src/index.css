@@ -1,0 +1,41 @@
+:root {
+    --text-xs: 12px;
+    --text-sm: 16px;
+    --text-md: 20px;
+    --text-lg: 28px;
+    --text-xl: 32px;
+    --title-xs: 16px;
+    --title-sm: 24px;
+    --title-md: 32px;
+    --title-lg: 52px;
+    --title-xl: 64px;
+    --padding-page-horizontal: 80px;
+    --padding-page-vertical: 40px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #262626;
+    color: white;
+    scrollbar-color: #262626 #1a1a1a;
+    scrollbar-width: thin;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}

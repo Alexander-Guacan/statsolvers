@@ -1,0 +1,114 @@
+.main {
+    padding: var(--padding-page-vertical) var(--padding-page-horizontal);
+}
+
+.title {
+    font-size: var(--title-md);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.subtitle {
+    font-size: var(--title-sm);
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.paragraph {
+    font-size: var(--text-sm);
+    margin-bottom: 32px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    color: currentColor;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 12px;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.logo__icon {
+    width: 44px;
+    height: 38px;
+    filter: invert(52%) sepia(75%) saturate(426%) hue-rotate(128deg) brightness(95%) contrast(93%);
+}
+
+.logo__text {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: lightseagreen;
+    word-break: break-all;
+}
+
+.lighted-text {
+    --text-color: currentColor;
+    --shadow-color: currentColor;
+    color: var(--text-color);
+    text-shadow: 0px 0px 20px var(--shadow-color);
+}
+
+.lighted-img {
+    box-shadow: 0px 0px 8px white;
+}
+
+.layout {
+    display: grid;
+    column-gap: 24px;
+    grid-template-columns: 1.5fr 10fr;
+    height: 70vh;
+}
+
+.layout__controls {
+    width: 140px;
+}
+
+.layout__output {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+    gap: 16px;
+}
+
+.tables {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    padding-top: var(--padding-page-vertical);
+    padding-bottom: var(--padding-page-vertical);
+}
+
+.form fieldset {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 32px;
+    border: none;
+    font-size: var(--text-md);
+}
+
+.form legend {
+    display: block;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,30 @@
+.presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 32px;
+    min-height: 88vh;
+    background-image: url("./../assets/home-bg.webp");
+    background-size: cover;
+    background-position: left;
+    background-blend-mode: overlay;
+}
+
+.presentation__greeting {
+    font-size: var(--title-md);
+}
+
+.presentation__title {
+    font-size: var(--title-xl);
+}
+
+.presentation__description {
+    width: 50%;
+    min-width: 50vw;
+    font-size: var(--text-md);
+}
+
+.presentation__footer {
+    display: flex;
+    column-gap: 24px;
+}

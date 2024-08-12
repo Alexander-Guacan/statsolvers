@@ -1,0 +1,7 @@
+.checkbox__input {
+    margin-left: 0;
+}
+
+.checkbox__label {
+    cursor: pointer;
+}

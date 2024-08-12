@@ -1,0 +1,35 @@
+.table-card {
+    display: block;
+    padding: 36px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    box-shadow: 0px 8px 12px black;
+    overflow-x: auto;
+}
+
+.table__title {
+    text-align: center;
+    border-bottom: 1px solid silver;
+}
+
+.table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.table__header th {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-transform: capitalize;
+}
+
+.table__body td {
+    padding: 24px 48px;
+}
+
+.table__body tr:nth-child(odd) {
+    background-color: rgb(64, 64, 64);
+}

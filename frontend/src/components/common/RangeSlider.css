@@ -1,0 +1,11 @@
+.range-slider__input {
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.range-slider__values {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-xs);
+}

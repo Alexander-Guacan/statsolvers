@@ -1,0 +1,13 @@
+.link-button {
+    display: inline-block;
+    padding: 12px 16px;
+    color: white;
+    background-color: blueviolet;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 350ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
