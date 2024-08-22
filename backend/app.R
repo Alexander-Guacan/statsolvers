@@ -466,6 +466,71 @@ handle_bivariable_info <- function(x, y) {
   )))
 }
 
+mlr_coefficients <- function() {
+  rlm <- lm(final_price ~ storage + ram, data = dataset)
+  data.frame(
+    intercept = rlm$coefficients[1],
+    storage = rlm$coefficients[2],
+    ram = rlm$coefficients[3],
+    row.names = NULL
+  )
+}
+
+mlr_img <- function() {
+  temp_file <- tempfile(fileext = ".png")
+  png(temp_file, width = 800, height = 800)
+
+  plot(dataset$storage, dataset$final_price,
+    main = "Modelo de regresión múltiple",
+    xlab = gettextf(
+      "%s y %s",
+      spanish_column("storage"),
+      spanish_column("ram")
+    ),
+    ylab = spanish_column("final_price"),
+    pch = 19, col = color_numeric("storage"), ylim = c(
+      min(dataset$final_price),
+      max(dataset$final_price)
+    )
+  )
+
+  par(new = TRUE)
+  plot(dataset$ram, dataset$final_price,
+    axes = FALSE, xlab = "", ylab = "",
+    pch = 19, col = color_numeric("ram"), ylim = c(
+      min(dataset$final_price),
+      max(dataset$final_price)
+    )
+  )
+
+  abline(
+    lm(final_price ~ storage, data = dataset),
+    col = color_numeric("storage"), lwd = 2
+  )
+  abline(
+    lm(final_price ~ ram, data = dataset),
+    col = color_numeric("ram"), lwd = 2
+  )
+
+  legend("topright",
+    legend = c(
+      spanish_column("storage"),
+      spanish_column("ram")
+    ),
+    col = c(
+      color_numeric("storage"),
+      color_numeric("ram")
+    ),
+    pch = 19, lty = 1, lwd = 2
+  )
+
+  dev.off()
+  img <- readBin(temp_file, "raw", n = file.info(temp_file)$size)
+  unlink(temp_file)
+
+  return(img)
+}
+
 cors_headers <- list(
   "Access-Control-Allow-Origin" = "*",
   "Access-Control-Allow-Methods" = "GET, POST, OPTIONS",
@@ -659,6 +724,24 @@ handle_bivariable <- function(body) {
   )
 }
 
+handle_multivariable <- function(body) {
+  tryCatch(
+    {
+      about <- body$about
+      switch(about,
+        plot = img_response(img = mlr_img()),
+        info = json_response(body = mlr_coefficients())
+      )
+    },
+    error = function(cond) {
+      return(plain_text_response(
+        status = 404L,
+        body = "Incomplete body request {about}"
+      ))
+    }
+  )
+}
+
 handle_post <- function(request) {
   unknown_endpoint_response <- plain_text_response(
     status = 404L,
@@ -675,6 +758,7 @@ handle_post <- function(request) {
         "/categoric" = handle_categoric(body),
         "/numeric" = handle_numeric(body),
         "/bivariable" = handle_bivariable(body),
+        "/multivariable" = handle_multivariable(body),
         return(unknown_endpoint_response)
       )
     },

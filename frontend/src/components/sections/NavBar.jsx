@@ -20,6 +20,10 @@ export function NavBar() {
     {
       url: "/bivariable",
       text: "Bivariable"
+    },
+    {
+      url: "/multivariable",
+      text: "Multivariable"
     }
   ]
 
