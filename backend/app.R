@@ -3,7 +3,7 @@ library(jsonlite)
 library(psych)
 library(EnvStats)
 
-dataset <- read.csv("./smartphones.csv")[
+dataset <- read.csv("./backend/smartphones.csv")[
   , c("Brand", "RAM", "Storage", "Color", "Free", "Final.Price")
 ]
 
