@@ -33,7 +33,7 @@ export function useCategoricalAnalysis({ columnInitial, confidenceLevelInitial }
         rows: frequencyTable
       },
       {
-        title: "Intervalo de confianza para una proporcion",
+        title: "Intervalo de confianza para una proporción",
         headers: ["categoria", "mínimo", "proporción muestral", "máximo"],
         rows: proportionConfidenceInterval
       }

@@ -53,18 +53,18 @@ export function useNumericalAnalysis({ columnInitial, confidenceLevelInitial }) 
         rows: shapeMeasures
       },
       {
-        title: "medidas de dispersion",
-        headers: ['varianza', 'desviacion estandar', 'rango', 'coeficiente de variacion'],
+        title: "medidas de dispersión",
+        headers: ['varianza', 'desviación estandar', 'rango', 'coeficiente de variación'],
         rows: dispersionMeasures
       },
       {
         title: "intervalo de confianza para un promedio",
-        headers: ['minimo', 'promedio', 'maximo'],
+        headers: ['mínimo', 'promedio', 'máximo'],
         rows: meanConfidenceInterval
       },
       {
         title: "intervalo de confianza para una varianza",
-        headers: ['minimo', 'varianza muestral', 'maximo'],
+        headers: ['mínimo', 'varianza muestral', 'máximo'],
         rows: varianceConfidenceInterval
       }
     ],

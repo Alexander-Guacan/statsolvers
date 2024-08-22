@@ -35,14 +35,14 @@ export function formatTable(table, columnX, columnY) {
     if (hasMeanByCategory(table)) {
         return {
             title: "Tabla de contingencia",
-            headers: ["categoria", "promedio"],
+            headers: ["categoría", "promedio"],
             rows: table
         }
     }
 
     return {
         title: "tabla de contingencia",
-        headers: ["categoria", ...getColumnCategories(table)],
+        headers: ["categoría", ...getColumnCategories(table)],
         rows: table
     }
 }
