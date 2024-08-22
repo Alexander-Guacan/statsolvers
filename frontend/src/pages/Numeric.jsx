@@ -67,8 +67,8 @@ export function Numeric() {
 
   return (
     <main className="main">
-      <h2 className="title">{translateColumnName(column)}</h2>
       <article className="summary">
+        <h2 className="title">{translateColumnName(column)}</h2>
         <h3 className="subtitle">Resumen</h3>
         <p className="paragraph">
           {interpretation({ column: column })}

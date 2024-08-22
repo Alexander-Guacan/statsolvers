@@ -11,14 +11,20 @@
 }
 
 .subtitle {
-    font-size: var(--title-sm);
+    font-size: var(--title-md);
     margin-bottom: 16px;
     text-transform: capitalize;
 }
 
 .paragraph {
-    font-size: var(--text-sm);
+    font-size: var(--text-md);
+}
+
+.summary {
+    padding: 24px;
     margin-bottom: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 32px black;
 }
 
 .img {
@@ -69,18 +75,23 @@
 
 .layout {
     display: grid;
-    column-gap: 24px;
+    column-gap: 20px;
     grid-template-columns: 1.5fr 10fr;
     height: 70vh;
 }
 
 .layout__controls {
-    width: 140px;
+    padding: 24px;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 
 .layout__output {
     width: 100%;
     overflow-y: auto;
+    padding: 24px;
+    border: 1px solid gray;
+    border-radius: 8px;
 }
 
 .cards {

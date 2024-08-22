@@ -1,6 +1,6 @@
 export function translateColumnName(columnName) {
     const translations = {
-        'ram': 'RAM',
+        'ram': 'R.A.M (Random Access Memory)',
         'storage': 'Almacenamiento',
         'final_price': 'Precio Final',
         'brand': 'Marca',

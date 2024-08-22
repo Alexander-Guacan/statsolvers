@@ -17,4 +17,5 @@
     margin-top: 0;
     margin-bottom: 0;
     list-style: none;
+    font-size: var(--text-md);
 }

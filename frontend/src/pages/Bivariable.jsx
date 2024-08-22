@@ -10,8 +10,8 @@ export function Bivariable() {
   const categoricalColumns = ["brand", "color", "free"]
   const numericalColumns = ["ram", "storage", "final_price"]
   const columns = [...categoricalColumns, ...numericalColumns]
-  const [columnX, setColumnX] = useState(categoricalColumns[1])
-  const [columnY, setColumnY] = useState(categoricalColumns[2])
+  const [columnX, setColumnX] = useState(categoricalColumns[0])
+  const [columnY, setColumnY] = useState(numericalColumns[2])
   const {
     plot,
     table,
